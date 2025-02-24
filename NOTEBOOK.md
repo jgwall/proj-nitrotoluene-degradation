@@ -36,13 +36,13 @@ So from this, our top 10 lines from the early sampling are:
 
 | Line | Samples | 2017 Nursery seed |
 | ---- | ---- | ---- |
-| R109B | night only | - (never grown?) |
-| A661 | night only | 271 |
-| MS153 | both | 2124 |
-| Pa875 | both | 1174 | 
-| F2834T | both | 273 |
-| Il 101T | night only | 141 |
-| CM105 | both | 361 |
+| R109B | both | - (never grown?) |
+| A661 | both | 271 |
+| MS153 | night only | 2124 |
+| Pa875 | night only | 1174 | 
+| F2834T | night only | 273 |
+| Il 101T | both | 141 |
+| CM105 | night only | 361 |
 | F7 | both | 1042 |
 | I29 | both | 467 |
 | MEF156-55-2 | both | 77 |
@@ -70,7 +70,6 @@ So if I had to pick my top 5 of each:
 - Low: Pa91, CH9, HP301, Oh603, A239 (Skipping B103 b/c of slightly lower seed yield)
 
 Unfortunately, some of these seem to be exceptionally good in 2017. Later years not so good. Do all 10 to make sure have at least 3 good ones per end?
-
 
 
 ## TODO: Determine the ultimate source of the nitrotoluene signal (=which organisms contributing to it)
