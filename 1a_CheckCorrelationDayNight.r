@@ -64,5 +64,31 @@ ggsave(myplot, file=paste(args$outprefix, "png", sep="."))
 
 # Get high/low lines, just of log-transformed
 logvalues$mean = rowMeans(logvalues[,c("day", "night")], na.rm=TRUE)
+logvalues = logvalues %>%
+  select(set, plot, Description, date, mean, day, night) %>%
+  arrange(date, desc(mean)) %>%
+  filter(!is.na(mean))
+write.csv(logvalues, file=paste(args$outprefix, ".log_values.csv", sep=""), row.names=FALSE)
 
+# Plot - overview
+logvalues = logvalues %>%
+  mutate(datapoints = 2 - is.na(day) - is.na(night)) %>%
+  mutate(datapoints = factor(datapoints)) %>% # Quality score; 
+  arrange(date, desc(mean)) %>%
+  mutate(xval = 1:n())
+barplot = ggplot(logvalues) +
+  aes(x=xval, y=mean, fill=datapoints) +
+  geom_col() +
+  facet_wrap(~date, ncol=1, scale="free_x")
+ggsave(barplot, file=paste(args$outprefix, ".barplot.png", sep=""))
+
+# Plot - Labeled
+barplot2 = ggplot(logvalues) +
+  aes(y=xval, x=mean, fill=datapoints, label=Description) +
+  geom_col(orientation="y") +
+  geom_text(size=1.5, hjust=0) +
+  facet_wrap(~date, nrow=1, scale="free_y") +
+  scale_y_reverse() +
+  xlim(c(NA, max(logvalues$mean)*1.25))
+ggsave(barplot2, file=paste(args$outprefix, ".barplot_labels.png", sep=""), width=4, height=8)
 
