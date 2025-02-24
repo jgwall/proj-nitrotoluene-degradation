@@ -14,8 +14,10 @@ find ./ | grep -i -e "\.sh$" -e "\.py$" -e "\.r$" | xargs -d "\n" git add
 # Add support files
 git add */*.tsv */*.fa */*/*.fa *.yml
 
-# Add key intermediate files
-
+# Add key source & intermediate files
+git add PhyllosphereGwasData/4j_predicted_metagenome.ko.l3.biom.txt
+git add PhyllosphereGwasData/2a_qiime_sample_key.tsv_corrected.txt
+git add 1b_maize_pca.txt
 
 # Add notebook
 git add NOTEBOOK.md
