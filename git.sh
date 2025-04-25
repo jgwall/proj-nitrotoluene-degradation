@@ -18,6 +18,8 @@ git add */*.tsv */*.fa */*/*.fa *.yml
 git add PhyllosphereGwasData/4j_predicted_metagenome.ko.l3.biom.txt
 git add PhyllosphereGwasData/2a_qiime_sample_key.tsv_corrected.txt
 git add 1b_maize_pca.txt
+git add PhyllosphereGwasData/2f_otu_table.sample_filtered.no_mitochondria_chloroplast.taxonomy.txt
+git add PhyllosphereGwasData/4i_closed_reference_otus.fix_copy_number.tsv
 
 # Add notebook
 git add NOTEBOOK.md

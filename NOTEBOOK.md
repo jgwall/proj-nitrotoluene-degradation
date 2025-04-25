@@ -73,3 +73,10 @@ Unfortunately, some of these seem to be exceptionally good in 2017. Later years 
 
 
 ## TODO: Determine the ultimate source of the nitrotoluene signal (=which organisms contributing to it)
+
+
+## 25 Apr 2025
+
+Tried doing genetic PCA of plants and plotting with nitrotoluene levels, but stopped partway; not sure will be worth it
+
+Did correlate taxa with nitrotoluene counts. Seems to be a lot of Enterobacteriaceae.
